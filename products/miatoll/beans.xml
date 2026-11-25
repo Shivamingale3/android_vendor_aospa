@@ -17,7 +17,7 @@
   <project path="kernel/xiaomi/sm6250" name="Shivamingale3/kernel_xiaomi_sm6250" remote="github" revision="17" />
 
   <!-- Proprietary blobs (arshad-jamil33 fork) -->
-  <project path="vendor/xiaomi/miatoll" name="Shivamingale3/vendor_xiaomi_miatoll" remote="github" revision="16.2" />
+  <project path="vendor/xiaomi/miatoll" name="Shivamingale3/vendor_xiaomi_miatoll" remote="github" revision="celerity" />
 
   <!-- Kept from AOSPA's official miatoll beans -->
   <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="uvite-855" />
