@@ -14,7 +14,7 @@
   <project path="hardware/xiaomi" name="Shivamingale3/android_hardware_xiaomi_a17" remote="github" revision="celerity" />
 
   <!-- Kernel: Kinesis 4.14.357 + BPF backport (Saamitk) -->
-  <project path="kernel/xiaomi/sm6250" name="Shivamingale3/kernel_xiaomi_sm6250" remote="github" revision="17" />
+  <project path="kernel/xiaomi/sm6250" name="Shivamingale3/kernel_xiaomi_sm6250" remote="github" revision="celerity" />
 
   <!-- Proprietary blobs (arshad-jamil33 fork) -->
   <project path="vendor/xiaomi/miatoll" name="Shivamingale3/vendor_xiaomi_miatoll" remote="github" revision="celerity" />
