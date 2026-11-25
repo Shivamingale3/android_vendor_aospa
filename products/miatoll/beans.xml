@@ -4,8 +4,14 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest>
-  <!-- atoll uses the msmnile (855) platform HALs in AOSPA -->
-  <include name="../platforms/msmnile.xml" />
+  <!-- atoll uses the msmnile (855) platform HALs in AOSPA. Inlined from ../platforms/msmnile.xml so the
+       display HAL can come from our fork (libdisplaydebug converted to Android.bp for Android 17). -->
+  <project path="hardware/qcom/display" name="Shivamingale3/android_hardware_qcom_display" remote="github" revision="celerity-855" />
+  <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="vauxite-legacy-component" />
+  <project path="hardware/qcom/media" name="AOSPA/android_hardware_qcom_media" remote="aospa" revision="vauxite-855" />
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="AOSPA/android_hardware_qcom_audio" remote="aospa" revision="vauxite-855" />
+  <remove-project name="AOSPA/android_hardware_qcom_thermal" />
+  <project path="vendor/qcom/opensource/thermal-hal" name="AOSPA/android_hardware_qcom_thermal" remote="aospa" revision="vauxite-legacy" />
 
   <!-- Device tree: Saamitk A17 tree adapted to PenguinOS -->
   <project path="device/xiaomi/miatoll" name="Shivamingale3/android_device_xiaomi_miatoll_a17" remote="github" revision="celerity" />
@@ -20,7 +26,6 @@
   <project path="vendor/xiaomi/miatoll" name="Shivamingale3/vendor_xiaomi_miatoll" remote="github" revision="celerity" />
 
   <!-- Kept from AOSPA's official miatoll beans -->
-  <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="uvite-855" />
   <project path="vendor/nxp/opensource/halimpl" name="AOSPA/android_vendor_nxp_opensource_halimpl" remote="aospa" revision="uvite-pn5xx" />
   <project path="vendor/nxp/opensource/hidlimpl" name="AOSPA/android_vendor_nxp_opensource_hidlimpl" remote="aospa" revision="uvite-pn5xx" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal" name="AOSPA/android_vendor_qcom_opensource_audio-hal_st-hal" remote="aospa" revision="uvite-855" />
