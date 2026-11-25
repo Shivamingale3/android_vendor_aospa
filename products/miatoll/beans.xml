@@ -4,15 +4,24 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest>
+  <!-- atoll uses the msmnile (855) platform HALs in AOSPA -->
   <include name="../platforms/msmnile.xml" />
 
-  <project path="device/xiaomi/miatoll" name="AOSPA/android_device_xiaomi_miatoll" remote="aospa" revision="uvite" />
+  <!-- Device tree: Saamitk A17 tree adapted to PenguinOS -->
+  <project path="device/xiaomi/miatoll" name="Shivamingale3/android_device_xiaomi_miatoll_a17" remote="github" revision="celerity" />
+
+  <!-- Hardware (A17, arshad-jamil33 fork, LineageOS-only modules disabled) -->
+  <project path="hardware/xiaomi" name="Shivamingale3/android_hardware_xiaomi_a17" remote="github" revision="celerity" />
+
+  <!-- Kernel: Kinesis 4.14.357 + BPF backport (Saamitk) -->
+  <project path="kernel/xiaomi/sm6250" name="Shivamingale3/kernel_xiaomi_sm6250" remote="github" revision="17" />
+
+  <!-- Proprietary blobs (arshad-jamil33 fork) -->
+  <project path="vendor/xiaomi/miatoll" name="Shivamingale3/vendor_xiaomi_miatoll" remote="github" revision="16.2" />
+
+  <!-- Kept from AOSPA's official miatoll beans -->
   <project path="hardware/qcom/gps" name="AOSPA/android_hardware_qcom_gps" remote="aospa" revision="uvite-855" />
-  <project path="hardware/xiaomi" name="AOSPA/android_hardware_xiaomi" remote="aospa" revision="uvite" />
-  <project path="kernel/xiaomi/miatoll" name="AOSPA/android_kernel_xiaomi_miatoll" remote="aospa" revision="uvite" />
   <project path="vendor/nxp/opensource/halimpl" name="AOSPA/android_vendor_nxp_opensource_halimpl" remote="aospa" revision="uvite-pn5xx" />
   <project path="vendor/nxp/opensource/hidlimpl" name="AOSPA/android_vendor_nxp_opensource_hidlimpl" remote="aospa" revision="uvite-pn5xx" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal" name="AOSPA/android_vendor_qcom_opensource_audio-hal_st-hal" remote="aospa" revision="uvite-855" />
-  <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="blobs" revision="uvite" clone-depth="1" />
-  <project path="vendor/xiaomi/camera" name="proprietary_vendor_xiaomi_camera" remote="blobs-gitlab" revision="uvite-miatoll" clone-depth="1" />
 </manifest>
