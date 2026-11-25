@@ -7,6 +7,8 @@
   <!-- atoll uses the msmnile (855) platform HALs in AOSPA. Inlined from ../platforms/msmnile.xml so the
        display HAL can come from our fork (libdisplaydebug converted to Android.bp for Android 17). -->
   <project path="hardware/qcom/display" name="Shivamingale3/android_hardware_qcom_display" remote="github" revision="celerity-855" />
+  <!-- GPS HAL comes from the device tree (device/xiaomi/miatoll/gps); exclude the platform one. -->
+  <remove-project name="platform/hardware/qcom/gps" />
   <project path="hardware/qcom/media" name="AOSPA/android_hardware_qcom_media" remote="aospa" revision="vauxite-855" />
   <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="AOSPA/android_hardware_qcom_audio" remote="aospa" revision="vauxite-855" />
   <remove-project name="AOSPA/android_hardware_qcom_thermal" />
