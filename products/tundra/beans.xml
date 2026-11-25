@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+     SPDX-FileCopyrightText: Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest>
+  <!-- lahaina (SM8350) platform HALs from AOSPA. If they fail on A17, swap for LineageOS lineage-24.0-caf-sm8350. -->
+  <include name="../platforms/lahaina.xml" />
+
+  <!-- Device trees (ported from LineageOS lineage-24.0) -->
+  <project path="device/motorola/tundra" name="Shivamingale3/android_device_motorola_tundra" remote="github" revision="penguin" />
+  <project path="device/motorola/sm7325-common" name="Shivamingale3/android_device_motorola_sm7325-common" remote="github" revision="penguin" />
+
+  <!-- Hardware -->
+  <project path="hardware/motorola" name="Shivamingale3/android_hardware_motorola" remote="github" revision="penguin" />
+
+  <!-- Kernel (LineageOS 5.4 + merged tundra defconfig) -->
+  <project path="kernel/motorola/sm7325" name="Shivamingale3/android_kernel_motorola_sm7325" remote="github" revision="penguin" />
+
+  <!-- Proprietary blobs (TheMuppets, stock U1SJS34.2-92-10-9) -->
+  <project path="vendor/motorola/tundra" name="Shivamingale3/proprietary_vendor_motorola_tundra" remote="github" revision="lineage-24.0" />
+  <project path="vendor/motorola/sm7325-common" name="Shivamingale3/proprietary_vendor_motorola_sm7325-common" remote="github" revision="lineage-24.0" />
+</manifest>
