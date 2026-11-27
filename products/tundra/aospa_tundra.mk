@@ -28,6 +28,11 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_MODEL := motorola edge 30 fusion
 PRODUCT_NAME := aospa_tundra
 
+# ART userfaultfd GC: the 5.4 kernel has CONFIG_USERFAULTFD=y and the MREMAP_DONTUNMAP
+# backport. Set here because default_art_config.mk (via full_base_telephony) wins over
+# values from the inherited device makefiles.
+PRODUCT_ENABLE_UFFD_GC := true
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # Boot animation resolution.
