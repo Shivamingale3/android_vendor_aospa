@@ -252,7 +252,8 @@ PRODUCT_PACKAGES += \
     ParanoidPapers \
     ParanoidSystemUI
 
-# Paranoid Sense
+# Paranoid Sense (its face libraries are arm64 prebuilts; x86 targets set TARGET_DISABLES_PARANOID_SENSE)
+ifneq ($(TARGET_DISABLES_PARANOID_SENSE),true)
 PRODUCT_PACKAGES += \
     ParanoidSense
 
@@ -262,6 +263,7 @@ PRODUCT_COPY_FILES += \
 # Enable Sense service for 64-bit only
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.face.sense_service=$(TARGET_SUPPORTS_64_BIT_APPS)
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \

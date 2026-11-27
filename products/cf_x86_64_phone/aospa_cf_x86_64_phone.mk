@@ -37,6 +37,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # PenguinOS
+# ParanoidSense needs arm64 face libraries (Megvii); none exist for x86_64.
+TARGET_DISABLES_PARANOID_SENSE := true
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 PRODUCT_NAME := aospa_cf_x86_64_phone
