@@ -3,6 +3,9 @@
      SPDX-FileCopyrightText: Paranoid Android
      SPDX-License-Identifier: Apache-2.0
 -->
-<!-- Cuttlefish needs no extra repos: device/google/cuttlefish and its kernels are in the main manifest. -->
+<!-- device/google/cuttlefish and its kernels are in the main manifest. -->
 <manifest>
+  <!-- Header-only: AOSPA's vendor/qcom/opensource/dataservices (main manifest) needs the
+       qti_kernel_headers module, which only a QCOM device kernel defines. Not built into cf. -->
+  <project path="kernel/xiaomi/sm6250" name="Shivamingale3/kernel_xiaomi_sm6250" remote="github" revision="celerity" />
 </manifest>
