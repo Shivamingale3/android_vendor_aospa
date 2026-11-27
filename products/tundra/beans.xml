@@ -18,6 +18,6 @@
   <project path="kernel/motorola/sm7325" name="Shivamingale3/android_kernel_motorola_sm7325" remote="github" revision="penguin" />
 
   <!-- Proprietary blobs (TheMuppets, stock U1SJS34.2-92-10-9) -->
-  <project path="vendor/motorola/tundra" name="Shivamingale3/proprietary_vendor_motorola_tundra" remote="github" revision="lineage-24.0" />
-  <project path="vendor/motorola/sm7325-common" name="Shivamingale3/proprietary_vendor_motorola_sm7325-common" remote="github" revision="lineage-24.0" />
+  <project path="vendor/motorola/tundra" name="Shivamingale3/proprietary_vendor_motorola_tundra" remote="github" revision="penguin" />
+  <project path="vendor/motorola/sm7325-common" name="Shivamingale3/proprietary_vendor_motorola_sm7325-common" remote="github" revision="penguin" />
 </manifest>
