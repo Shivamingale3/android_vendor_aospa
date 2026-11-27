@@ -22,3 +22,9 @@ include vendor/aospa/target/board/BoardConfigKernel.mk
 
 # Soong
 include vendor/aospa/target/board/BoardConfigSoong.mk
+
+# Cuttlefish framework test (x86_64): the FaceSense prebuilts are arm64-only, so
+# vendor.aospa.biometrics.face.required can never resolve there. Phones are unaffected.
+ifeq ($(TARGET_PRODUCT),aospa_cf_x86_64_phone)
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+endif
