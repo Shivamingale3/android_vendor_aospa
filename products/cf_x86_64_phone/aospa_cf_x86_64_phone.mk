@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # PenguinOS
+# PenguinOS drops the 6.12 virtual-device kernel modules (obsolete.xml) but keeps 6.18;
+# cuttlefish defaults to 6.12, so pick 6.18 (kernel + modules both present).
+TARGET_KERNEL_USE := 6.18
+
 # Cuttlefish ships a prebuilt kernel (TARGET_KERNEL_PATH, set by its BoardConfig). Point the
 # QCOM kernel logic (kernelscripts, BoardConfigKernel, dtbo) at it so none of it runs.
 # Recursive (=) on purpose: TARGET_KERNEL_PATH is only defined later, by the board config.
