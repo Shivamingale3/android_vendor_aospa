@@ -37,6 +37,11 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # PenguinOS
+# Cuttlefish ships a prebuilt kernel (TARGET_KERNEL_PATH, set by its BoardConfig). Point the
+# QCOM kernel logic (kernelscripts, BoardConfigKernel, dtbo) at it so none of it runs.
+# Recursive (=) on purpose: TARGET_KERNEL_PATH is only defined later, by the board config.
+TARGET_PREBUILT_KERNEL = $(TARGET_KERNEL_PATH)
+
 # ParanoidSense needs arm64 face libraries (Megvii); none exist for x86_64.
 TARGET_DISABLES_PARANOID_SENSE := true
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
