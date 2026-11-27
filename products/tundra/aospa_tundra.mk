@@ -33,6 +33,10 @@ PRODUCT_NAME := aospa_tundra
 # values from the inherited device makefiles.
 PRODUCT_ENABLE_UFFD_GC := true
 
+# Kernel 5.4 is below the minimum for kernel FCM 7 (5.10). Skip only the OTA-time kernel
+# requirement check; the HAL/framework VINTF checks still run.
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # Boot animation resolution.
